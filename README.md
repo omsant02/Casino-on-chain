@@ -81,48 +81,6 @@ We've built our first game - **Multiplayer Coin Flip** - to prove the architectu
               │  └─────────────────────────────────┘ │
               └────────────────────────────────────────┘
 ```
-
----
-
-## 🎮 Current Game: Multiplayer Coin Flip
-
-Our first game demonstrates the complete casino infrastructure:
-
-### Game Flow
-```
-┌─────────────────────────────────────────────────────────┐
-│ 1. CONNECT & AUTHENTICATE                               │
-│    User → MetaMask → Yellow Network → Get Chip Balance │
-└─────────────────────────────────────────────────────────┘
-                         ↓
-┌─────────────────────────────────────────────────────────┐
-│ 2. ENTER LOBBY                                          │
-│    • See available games                                │
-│    • Create new game (1 or 2 chip bet)                 │
-│    • Join existing game                                 │
-└─────────────────────────────────────────────────────────┘
-                         ↓
-┌─────────────────────────────────────────────────────────┐
-│ 3. PLAY GAME (Real-time)                                │
-│    Player A: Choose HEADS/TAILS                         │
-│    Player B: Choose HEADS/TAILS                         │
-│    → Both choices submitted → Coin flips → Result!     │
-└─────────────────────────────────────────────────────────┘
-                         ↓
-┌─────────────────────────────────────────────────────────┐
-│ 4. INSTANT SETTLEMENT (Gas-free)                        │
-│    Winner: +chips (off-chain update)                    │
-│    Loser: -chips (off-chain update)                     │
-│    → Play again or cash out                             │
-└─────────────────────────────────────────────────────────┘
-                         ↓
-┌─────────────────────────────────────────────────────────┐
-│ 5. CASH OUT                                             │
-│    Close Yellow channel → On-chain settlement           │
-│    → USDC transferred to wallet                         │
-└─────────────────────────────────────────────────────────┘
-```
-
 ---
 
 ## 💡 Why State Channels?
@@ -219,33 +177,6 @@ npm run dev
 
 ---
 
-## 🎯 How to Play
-
-### Step 1: Get Chips
-- **Real Mode:** Deposit USDC at [app.yellow.com](https://app.yellow.com)
-- **Demo Mode:** Click "Demo: Add 10 Chips" button
-
-### Step 2: Create or Join Game
-- Click "Host 1 chip game" or "Host 2 chip game"
-- Or join an existing game from the lobby
-
-### Step 3: Play
-- Choose HEADS or TAILS
-- Wait for opponent's choice
-- See instant result!
-
-### Step 4: Keep Playing
-- Winner gets chips, loser loses chips
-- Play as many rounds as you want
-- All transactions are gas-free!
-
-### Step 5: Cash Out
-- Click "Cash Out" when done
-- Yellow channel closes and settles on-chain
-- USDC sent to your wallet
-
----
-
 ## 🔐 Security & Fairness
 
 ### State Channel Security
@@ -253,15 +184,6 @@ npm run dev
 - Both parties must agree to each state change
 - Dispute resolution via on-chain settlement
 - Non-custodial (you always control your funds)
-
-### Fair Randomness
-- Current: Server-side random (trusted)
-- Future: Chainlink VRF (verifiable randomness)
-- Future: Commit-reveal scheme (fully decentralized)
-
-### Audit Status
-- ⚠️ Not audited (MVP/Demo)
-- 📋 Planned before mainnet launch
 
 ---
 
@@ -273,14 +195,14 @@ npm run dev
 - [x] Real-time multiplayer
 - [x] Demo mode
 
-### 🚧 Phase 2: Expansion (Q2 2025)
+### 🚧 Phase 2: Expansion
 - [ ] Blackjack game
 - [ ] Poker game
 - [ ] Dice game
 - [ ] Universal chip system
 - [ ] Enhanced UI/UX
 
-### 🔮 Phase 3: Full Casino (Q3 2025)
+### 🔮 Phase 3: Full Casino
 - [ ] Roulette
 - [ ] Slots
 - [ ] Live dealer games
@@ -294,6 +216,13 @@ npm run dev
 - [ ] Referral system
 - [ ] Mobile app
 - [ ] SDK for game developers
+
+---
+
+### Reach Out to me:
+- 🕊️ Twitter: [Om_Santoshwar](https://x.com/Om_Santoshwar)
+- 📩 Telegram: [omsanto02](https://t.me/omsanto02)
+- 💼 Linkedin: [Om_Santoshwar](https://www.linkedin.com/in/om-santoshwar-0964a1227/)
 
 ---
 
@@ -314,19 +243,6 @@ We welcome contributions! Whether it's:
 
 ---
 
-## 📊 Game Mechanics (Coin Flip)
-
-### Betting
-- Create game with 1 or 2 chip bet
-- Opponent must match the bet
-- Chips held in Yellow state channels
-
-### Gameplay
-- Both players choose HEADS or TAILS simultaneously
-- Server generates random coin flip (50/50)
-- Winner determined by matching coin result
-
----
 
 <div align="center">
 
