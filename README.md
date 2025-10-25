@@ -2,6 +2,12 @@
 
 **Bringing the entire casino experience to blockchain with instant, gas-free gameplay powered by Yellow Network's state channels.**
 
+<img width="1656" height="776" alt="image" src="https://github.com/user-attachments/assets/ae1322af-01cc-43c8-aaa6-280e9abda285" />
+
+<br/>
+<br/>
+<br/>
+
 ![Status](https://img.shields.io/badge/Status-MVP-success) ![Yellow Network](https://img.shields.io/badge/Built%20on-Yellow%20Network-yellow) ![License](https://img.shields.io/badge/License-MIT-blue)
 
 ## 🌟 Vision
@@ -140,24 +146,13 @@ Traditional on-chain gaming is broken:
 
 ## 🛠️ Tech Stack
 
-### Frontend (`yellow-casino/`)
-- **React 18** - UI framework
-- **Vite** - Build tool & dev server
+- **React 19** - UI framework
 - **WebSocket Client** - Real-time communication
-- **MetaMask Integration** - Wallet connection
-- **Yellow Network Client** - State channel operations
-
-### Backend (`backend/`)
 - **Node.js** - Runtime environment  
 - **ws Library** - WebSocket server
-- **Game State Manager** - In-memory game store
-- **Fair Random Logic** - Coin flip resolution
-
-### Blockchain Integration (`yellow/`)
 - **Yellow Network SDK** - State channel protocol
 - **ERC-7824 Implementation** - State channel standard
-- **Ethereum RPC** - Blockchain interaction
-- **USDC Integration** - Stablecoin payments
+- **Ethers.js** - Blockchain interaction
 
 ---
 
@@ -179,10 +174,6 @@ casino-on-chain/
 │   ├── package.json
 │   └── README.md
 │
-├── yellow/                 # Yellow Network integration
-│   ├── yellowService.js    # State channel client
-│   └── config/
-│
 └── README.md              # This file
 ```
 
@@ -190,16 +181,11 @@ casino-on-chain/
 
 ## 🚀 Getting Started
 
-### Prerequisites
-- Node.js v18+
-- MetaMask browser extension
-- USDC in Yellow Network (for real gameplay)
-
 ### Installation
 
 **1. Clone the repository**
 ```bash
-git clone https://github.com/yourusername/casino-on-chain.git
+git clone https://github.com/omsant02/Casino-on-chain.git
 cd casino-on-chain
 ```
 
@@ -207,7 +193,7 @@ cd casino-on-chain
 ```bash
 cd backend
 npm install
-npm start
+node server.js
 ```
 ✅ Server runs on `ws://localhost:8080`
 
@@ -339,82 +325,6 @@ We welcome contributions! Whether it's:
 - Both players choose HEADS or TAILS simultaneously
 - Server generates random coin flip (50/50)
 - Winner determined by matching coin result
-
-### Payouts
-```
-Scenario 1: Different Choices
-Player A: HEADS → Coin: HEADS → Player A wins
-Player B: TAILS → Coin: HEADS → Player B loses
-
-Result: Player A gets +1 chip, Player B gets -1 chip
-
-Scenario 2: Same Choices (Draw)
-Player A: HEADS → Coin: TAILS → Both lose
-Player B: HEADS → Coin: TAILS → Both lose
-
-Result: Both keep their chips (no change)
-```
-
----
-
-## 🌐 Deployment
-
-### Backend (Railway/Render)
-```bash
-cd backend
-# Set environment variables:
-# PORT=8080
-# NODE_ENV=production
-# Deploy to platform
-```
-
-### Frontend (Vercel)
-```bash
-cd yellow-casino
-# Update WebSocket URL in src/App.jsx:
-# const WS_URL = 'wss://your-backend-domain.com';
-npm run build
-vercel --prod
-```
-
----
-
-## 🐛 Known Issues
-
-- Game resolution randomness is server-side (VRF coming soon)
-- Cash out simulated (Yellow app session API in development)
-- Mobile UI needs optimization
-- WebSocket reconnection could be more robust
-
----
-
-## 📄 License
-
-MIT License - see [LICENSE](LICENSE) file
-
----
-
-## 🙏 Acknowledgments
-
-- **Yellow Network** - State channel infrastructure
-- **MetaMask** - Wallet integration
-- **React & Vite** - Development tools
-- **Open Source Community** - Inspiration and support
-
----
-
-## 📞 Contact & Links
-
-- **GitHub:** https://github.com/yourusername/casino-on-chain
-- **Demo:** [Your Vercel URL]
-- **Yellow Network:** https://yellow.com
-- **Twitter:** [@yourhandle]
-
----
-
-## ⚠️ Disclaimer
-
-This is a demonstration project. Gambling may be regulated or prohibited in your jurisdiction. This software is provided "as is" without warranty. Use at your own risk. Always gamble responsibly.
 
 ---
 
