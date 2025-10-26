@@ -250,6 +250,4 @@ We welcome contributions! Whether it's:
 
 *Bringing the casino to blockchain, one game at a time.*
 
-[⭐ Star us on GitHub](https://github.com/yourusername/casino-on-chain) | [🚀 Try the Demo](your-demo-url) | [📖 Documentation](your-docs-url)
-
 </div>
